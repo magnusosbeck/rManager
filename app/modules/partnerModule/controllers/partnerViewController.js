@@ -7,7 +7,7 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
     self.init = function () {
 
         partnerService.get().then(function(response){
-            $scope.partners = response;
+            $scope.partners = response.results;
         });
 
 
