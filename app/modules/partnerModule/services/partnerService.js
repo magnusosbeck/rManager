@@ -17,7 +17,7 @@ partnerModule.factory('partnerService', ['$http', '$q', '$location', 'storageSer
 
             $http({
                 method: 'GET',
-                url: rootUrl     + "classes/Partner",
+                url: rootUrl + "classes/Partner",
                 //url: rootUrl + "functions/hello",
                 headers: {
                     'Content-Type': 'application/json'
@@ -38,5 +38,3 @@ partnerModule.factory('partnerService', ['$http', '$q', '$location', 'storageSer
 
     return partnerService;
 }]);
-
-

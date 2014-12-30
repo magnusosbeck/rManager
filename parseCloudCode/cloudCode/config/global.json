@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Relation manager": {
+            "applicationId": "bN4N86WqmUekbacanQInNRpItyyngj0WHm0kbRVf", 
+            "masterKey": "iwSpv0w9aGoE0uoldJWObsJlVXisJ0Be3ruln5R0"
+        }, 
+        "_default": {
+            "link": "Relation manager"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.2"
+    }
+}
