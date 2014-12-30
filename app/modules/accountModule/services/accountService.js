@@ -7,6 +7,7 @@ accountModule.factory('accountService', ['$http', '$q', '$location', 'storageSer
 
     
     var currentUser = storageService.load('currentUser');
+    console.log(currentUser);
 
     var accountService = {
         login: function (userName, password) {

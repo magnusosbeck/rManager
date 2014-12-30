@@ -3,11 +3,13 @@
 // Declare app level module which depends on views, and components
 
 var accountModule = angular.module('accountModule', []);
+var partnerModule = angular.module('partnerModule', []);
 
 angular.module('myApp', [
   'ngRoute',
   'myApp.version',
-  'accountModule'
+  'accountModule',
+  'partnerModule'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});

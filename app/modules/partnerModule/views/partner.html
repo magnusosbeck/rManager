@@ -1,5 +1,6 @@
-<div style="background-color: #3a3a3a; padding: 20px; margin-top: 20px;">
-    <dl ng-repeat="(key, value) in user" class="dl-horizontal">
+<h1>Partners <span class="badge">Count : {{partners.results.length}}</span></h1>
+<div ng-repeat="partner in partners.results" style="background-color: #3a3a3a; padding: 20px; margin-top: 20px;">
+    <dl ng-repeat="(key, value) in partner | orderBy:'firstName'" class="dl-horizontal">
         <dt>{{key}}</dt><dd><kbd>{{value}}</kbd></dd>
     </dl>
 </div>
