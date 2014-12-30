@@ -4,12 +4,14 @@
 
 var accountModule = angular.module('accountModule', []);
 var partnerModule = angular.module('partnerModule', []);
+var dodoModule = angular.module('dodoModule', []);
 
 angular.module('myApp', [
   'ngRoute',
   'myApp.version',
   'accountModule',
-  'partnerModule'
+  'partnerModule',
+  'dodoModule'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});

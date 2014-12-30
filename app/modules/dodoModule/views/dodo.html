@@ -1,0 +1,9 @@
+<h1>Dodos <span class="badge">Count : {{dodos.length}}</span></h1>
+<div ng-repeat="dodo in dodos" style="background-color: #3a3a3a; padding: 20px; margin-top: 20px;">
+    <h3 class="text-center">{{dodo.title}}<br/><small>{{dodo.description}}</small></h3>
+    <hr>
+    <dl ng-repeat="(key, value) in dodo | orderBy:'firstName'" class="dl-horizontal"
+        ng-class="key == 'description' || key == 'createdAt' || key == 'title' || key == 'objectId' || key == 'updatedAt'  ? 'text-info':'text-warning'">
+        <dt>{{key}}</dt><dd><kbd>{{value}}</kbd></dd>
+    </dl>
+</div>
