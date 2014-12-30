@@ -7,7 +7,6 @@ partnerModule.factory('partnerService', ['$http', '$q', '$location', 'storageSer
     currentUser = storageService.load('currentUser');
     $http.defaults.headers.common["X-Parse-Application-Id"] = "bN4N86WqmUekbacanQInNRpItyyngj0WHm0kbRVf";
     $http.defaults.headers.common["X-Parse-REST-API-Key"] = "eQ5UDAIOwcsoJLQJANu6gUkpmDNkKO12mdev87LH";
-    $http.defaults.headers.common["X-Parse-Session-Token"] = currentUser.sessionToken;
 
     console.log(currentUser);
 

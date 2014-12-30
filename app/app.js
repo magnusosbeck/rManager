@@ -57,4 +57,13 @@ config(['$routeProvider', function($routeProvider) {
 // Completely disable SCE.  For demonstration purposes only!
 // Do not use in new projects.
       $sceProvider.enabled(false);
+  }]).run(['storageService', '$location', '$http', function(storageService, $location, $http){
+
+      var currentUser = storageService.load('currentUser');
+      if(typeof currentUser == "undefined"){
+          $location.path('/account/login');
+      }else{
+          $http.defaults.headers.common["X-Parse-Session-Token"] = currentUser.sessionToken;
+      }
+
   }]);
