@@ -21,8 +21,12 @@
 </head>
 <body>
   <div>
-    <span style="width:100%; display: inline-block; text-align: center; margin-top: 5px;"><kbd>/account/profile/:id</kbd> <kbd>/account/profile</kbd> <kbd>/account/login</kbd> <kbd>/account/register</kbd> <kbd>/partner</kbd></span>
-
+    <ul class="nav nav-pills" style="width:100%; display: inline-block; background-color: black; padding: 5px;">
+      <li role="presentation"><a href="#/account/login">/account/login</a></li>
+      <li role="presentation"><a href="#/account/profile">/account/profile</a></li>
+      <li role="presentation"><a href="#/account/profile/:id">/account/profile/:id</a></li>
+      <li role="presentation"><a href="#/partner">/partner</a></li>
+    </ul>
   </div>
   <div class="mainContent" ng-view></div>
 

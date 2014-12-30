@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52854e98-ee79-4136-ab1f-b6c51e34e57b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/partnerModule/views/partner.html" afterPath="$PROJECT_DIR$/app/modules/partnerModule/views/partner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js" afterPath="$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/partnerModule/controllers/partnerViewController.js" afterPath="$PROJECT_DIR$/app/modules/partnerModule/controllers/partnerViewController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="partnerService.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="partnerService.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.30645162" vertical-offset="0" max-vertical-offset="930">
+              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -52,11 +50,9 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="945">
-              <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partner.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="partner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/partnerModule/views/partner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.049668875" vertical-offset="0" max-vertical-offset="906">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -117,10 +113,10 @@
         <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/modules/accountModule/services/accountService.js" />
         <option value="$PROJECT_DIR$/app/modules/partnerModule/partnerRoutes.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js" />
         <option value="$PROJECT_DIR$/app/modules/partnerModule/controllers/partnerViewController.js" />
         <option value="$PROJECT_DIR$/app/modules/partnerModule/views/partner.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js" />
       </list>
     </option>
   </component>
@@ -484,28 +480,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="945">
-          <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/partnerModule/partnerRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -520,11 +498,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/partnerModule/views/partner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.049668875" vertical-offset="0" max-vertical-offset="906">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/partnerModule/services/partnerService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30645162" vertical-offset="0" max-vertical-offset="930">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
