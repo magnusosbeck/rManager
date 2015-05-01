@@ -1,4 +1,4 @@
-partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '$routeParams', function ($scope, partnerService, $routeParams) {
+partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '$routeParams', 'storageService', function ($scope, partnerService, $routeParams, storageService) {
 
     var self = this;
 
@@ -6,21 +6,15 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
 
     self.init = function () {
 
-        partnerService.get().then(function(response){
-            $scope.partners = response.results;
-        });
+        $scope.partner = {};
+        var currentUser = storageService.load('currentUser');
+        console.log(currentUser);
 
-
-           //
-           //if($routeParams.id){
-           //    accountService.getSpecifiedUser($routeParams.id).then(function(response){
-           //        $scope.user = response;
-           //    });
-           //}else{
-           //    accountService.getCurrentUser().then(function(user){
-           //        $scope.user = user;
-           //    });
-           // }
+        if(currentUser && currentUser['partner']){
+            partnerService.read(currentUser['partner']['objectId']).then(function(response){
+                $scope.partner = response;
+            });
+        }
 
     };
     self.init();

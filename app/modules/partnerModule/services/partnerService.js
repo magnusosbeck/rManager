@@ -32,6 +32,27 @@ partnerModule.factory('partnerService', ['$http', '$q', '$location', 'storageSer
 
             return deferred.promise;
 
+        },
+        read : function (partnerID){
+
+            var deferred = $q.defer();
+
+            $http({
+                method: 'GET',
+                url: rootUrl + "classes/Partner/" + partnerID,
+                //url: rootUrl + "functions/hello",
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).
+              success(function (data, status, headers, config) {
+                  deferred.resolve(data);
+              }).
+              error(function (data, status, headers, config) {
+                  deferred.reject('error');
+              });
+
+            return deferred.promise;
         }
     };
 
