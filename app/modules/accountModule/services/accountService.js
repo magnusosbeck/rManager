@@ -30,6 +30,9 @@ accountModule.factory('accountService', ['$http', '$q', '$location', 'storageSer
                   deferred.resolve(data);
               }).
               error(function (data, status, headers, config) {
+                  if(status == '404'){
+                      alert('Wrong Username or Password, plz try again!');
+                  }
                   deferred.reject('error');
               });
 

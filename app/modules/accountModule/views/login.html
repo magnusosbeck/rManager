@@ -9,11 +9,11 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <form role="form">
-                <div class="form-group">
+                <div class="form-group" ng-hide="input.response">
                     <label >Användarnamn</label>
                     <input type="text" ng-model="input.username" class="form-control" placeholder="Ex. Jan Banan">
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-hide="input.response">
                     <label>Lösenord</label>
                     <input type="password" ng-model="input.password" class="form-control" placeholder="Ex. 67823ykmbj">
                 </div>
