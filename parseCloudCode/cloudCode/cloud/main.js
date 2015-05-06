@@ -1,6 +1,22 @@
 
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:
-Parse.Cloud.define("hello", function(request, response) {
-  response.success("Hello world!");
+Parse.Cloud.define("getDodos", function(request, response) {
+
+	var Dodos = Parse.Object.extend("Dodo");
+	var query = new Parse.Query(Dodos);
+
+// 	query.equalTo("initiative", 5);
+
+	query.find({
+	  success: function(results) {
+	  	console.log(request);
+	  	response.success(results);
+	
+	  },
+	  error: function(error) {
+// 	    alert("Error: " + error.code + " " + error.message);
+	  }
+	});
+
 });

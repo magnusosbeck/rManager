@@ -1,4 +1,4 @@
-partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '$routeParams', 'storageService', function ($scope, partnerService, $routeParams, storageService) {
+partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '$routeParams', 'storageService', 'dodoService', function ($scope, partnerService, $routeParams, storageService, dodoService) {
 
     var self = this;
 
@@ -17,6 +17,15 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
         }
 
     };
+
     self.init();
+
+    $scope.getDodos = function(partner){
+
+        dodoService.fetchDodoBasedOnPartner(partner).then(function(response){
+            console.log(response);
+        });
+
+    };
 
 }]);

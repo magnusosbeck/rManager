@@ -32,6 +32,28 @@ dodoModule.factory('dodoService', ['$http', '$q', '$location', 'storageService',
 
             return deferred.promise;
 
+        },
+        fetchDodoBasedOnPartner : function(partner){
+            var deferred = $q.defer();
+            console.log(partner['objectId']);
+            $http({
+                method: 'POST',
+                //url: rootUrl + "functions/getDodos",
+                url: rootUrl + "functions/getDodos",
+                data : '{"partner":"' + partner['objectId'] + '"}',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).
+              success(function (data, status, headers, config) {
+                  console.log(data);
+                  deferred.resolve(data);
+              }).
+              error(function (data, status, headers, config) {
+                  deferred.reject('error');
+              });
+
+            return deferred.promise;
         }
     };
 
