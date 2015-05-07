@@ -23,8 +23,14 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
 
     $scope.getDodos = function(partner){
 
-        dodoService.fetchDodoBasedOnPartner(partner).then(function(response){
-            $scope.dodos = response.result;
+        dodoService.get().then(function(response){
+
+            for(var i in response.results){
+                response.results[i].points = 100 + (response.results[i].size * 100);
+            }
+
+
+            $scope.dodos = response.results;
         });
 
     };

@@ -1,67 +1,77 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-  <!--Styling-->
-  <link rel="stylesheet" href="styleing/bootwatch.css">
-  <link rel="stylesheet" href="styleing/app.css">
+    <!--Styling-->
+    <!--<link rel="stylesheet" href="styleing/bootwatch.css">-->
+    <link rel="stylesheet" href="styleing/app.css">
 
-  <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <!--<body style="background-image: url('styleing/img/Fighting-Couple.jpg'); background-size: cover;">-->
 <body>
-  <div>
-    <ul class="nav nav-pills" style="width:100%; display: inline-block; background-color: black; padding: 5px;">
-      <li role="presentation"><a href="#/account/login">/account/login</a></li>
-      <li role="presentation"><a href="#/account/profile">/account/profile</a></li>
-      <li role="presentation"><a href="#/account/profile/:id">/account/profile/:id</a></li>
-      <li role="presentation"><a href="#/partner">/partner</a></li>
-      <li role="presentation"><a href="#/dodo">/dodo</a></li>
-    </ul>
-  </div>
-  <div class="mainContent" ng-view></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-route/angular-route.js"></script>
-  <script src="../bower_components/jQuery/dist/jquery.min.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="app.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+<section layout="row" layout-sm="column" layout-align="center center">
+    <md-button class="md-primary" href="#/account/login">login</md-button>
+    <md-button class="md-primary" href="#/account/profile">My profile</md-button>
+    <md-button class="md-primary" href="#/partner">partner</md-button>
+    <md-button class="md-primary" href="#/dodo">dodo</md-button>
+</section>
+<md-content flex layout-padding>
+   <div ng-view style="max-width: 900px; margin: auto;"></div>
+</md-content>
+
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="../bower_components/jQuery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-aria/angular-aria.js"></script>
+<script src="../bower_components/angular-material/angular-material.js"></script>
+
+<script src="app.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
 
 
 <!--Modules-->
 
 <!--Account module-->
-  <script src="modules/accountModule/controllers/accountController.js"></script>
-  <script src="modules/accountModule/controllers/profileViewController.js"></script>
-  <script src="modules/accountModule/services/accountService.js"></script>
-  <script src="modules/accountModule/userRoutes.js"></script>
+<script src="modules/accountModule/controllers/accountController.js"></script>
+<script src="modules/accountModule/controllers/profileViewController.js"></script>
+<script src="modules/accountModule/services/accountService.js"></script>
+<script src="modules/accountModule/userRoutes.js"></script>
 
-  <!--Partner module-->
-  <script src="modules/partnerModule/controllers/partnerViewController.js"></script>
-  <script src="modules/partnerModule/services/partnerService.js"></script>
-  <script src="modules/partnerModule/partnerRoutes.js"></script>
+<!--Partner module-->
+<script src="modules/partnerModule/controllers/partnerViewController.js"></script>
+<script src="modules/partnerModule/services/partnerService.js"></script>
+<script src="modules/partnerModule/partnerRoutes.js"></script>
 
-  <!--Dodo module-->
-  <script src="modules/dodoModule/controllers/dodoViewController.js"></script>
-  <script src="modules/dodoModule/services/dodoService.js"></script>
-  <script src="modules/dodoModule/dodoRoutes.js"></script>
+<!--Dodo module-->
+<script src="modules/dodoModule/controllers/dodoViewController.js"></script>
+<script src="modules/dodoModule/services/dodoService.js"></script>
+<script src="modules/dodoModule/dodoRoutes.js"></script>
 
 
 </body>

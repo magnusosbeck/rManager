@@ -7,15 +7,16 @@ var partnerModule = angular.module('partnerModule', []);
 var dodoModule = angular.module('dodoModule', []);
 
 angular.module('myApp', [
-  'ngRoute',
-  'myApp.version',
-  'accountModule',
-  'partnerModule',
-  'dodoModule'
+    'ngMaterial',
+    'ngRoute',
+    'myApp.version',
+    'accountModule',
+    'partnerModule',
+    'dodoModule'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]).factory('storageService', ['$log', '$rootScope', function ($log, $rootScope) {
+  config(['$routeProvider', function ($routeProvider) {
+      $routeProvider.otherwise({redirectTo: '/view1'});
+  }]).factory('storageService', ['$log', '$rootScope', function ($log, $rootScope) {
       var localStorageMaxCount = 10;
       var storageService = {
           save: function (storageName, data) {
@@ -55,17 +56,20 @@ config(['$routeProvider', function($routeProvider) {
           }
       };
       return storageService;
-  }]).config(['$sceProvider', function($sceProvider) {
+  }]).config(['$sceProvider', function ($sceProvider) {
 // Completely disable SCE.  For demonstration purposes only!
 // Do not use in new projects.
       $sceProvider.enabled(false);
-  }]).run(['storageService', '$location', '$http', function(storageService, $location, $http){
+  }]).run(['storageService', '$location', '$http', function (storageService, $location, $http) {
 
       var currentUser = storageService.load('currentUser');
-      if(typeof currentUser == "undefined"){
+      if (typeof currentUser == "undefined") {
           $location.path('/account/login');
-      }else{
+      } else {
           $http.defaults.headers.common["X-Parse-Session-Token"] = currentUser.sessionToken;
       }
 
-  }]);
+  }])
+  .config(function ($mdThemingProvider) {
+      $mdThemingProvider.theme('default');
+  });
