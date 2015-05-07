@@ -1,20 +1,55 @@
-<h1>{{partner.firstName}} {{partner.lastName}}</h1>
-<dl class="dl-horizontal">
-    <dt>Attribute</dt>
-    <dd>Value</dd>
-    <dt translate="coolness">coolness</dt>
-    <dd>{{partner.coolness}}</dd>
-    <dt translate="initiative">initiative
-    <dd>{{partner.initiative}}</dd>
-    <dt translate="kindness">kindness
-    <dd>{{partner.kindness}}</dd>
-    <dt translate="lazyness">lazyness
-    <dd>{{partner.lazyness}}</dd>
-</dl>
-<h3 class="text-center">{{partner.firstName}} {{partner.lastName}}</h3>
-<dl ng-repeat="(key, value) in partner | orderBy:'firstName'" class="dl-horizontal"
-    ng-class="key == 'firstName' || key == 'createdAt' || key == 'lastName' || key == 'objectId' || key == 'updatedAt'  ? 'text-info':'text-warning'">
-    <dt>{{key}}</dt>
-    <dd><kbd>{{value}}</kbd></dd>
-</dl>
-<button ng-click="getDodos(partner)">Match dodos</button>
+<h1 class="text-center">{{partner.firstName}} {{partner.lastName}} <small>ID: {{partner.objectId}}</small></h1>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">
+                coolness
+            </th>
+            <th class="text-center">
+                initiative
+            </th>
+            <th class="text-center">
+                kindness
+            </th>
+            <th class="text-center">
+                lazyness
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center h1">
+                {{partner.coolness}}
+            </td>
+            <td class="text-center h1">
+                {{partner.initiative}}
+            </td>
+            <td class="text-center h1">
+                {{partner.kindness}}
+            </td>
+            <td class="text-center h1">
+                {{partner.lazyness}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr/>
+
+
+<!--<dl ng-repeat="(key, value) in partner | orderBy:'firstName'" class="dl-horizontal"-->
+    <!--ng-class="key == 'firstName' || key == 'createdAt' || key == 'lastName' || key == 'objectId' || key == 'updatedAt'  ? 'text-info':'text-warning'">-->
+    <!--<dt>{{key}}</dt>-->
+    <!--<dd><kbd>{{value}}</kbd></dd>-->
+<!--</dl>-->
+<button class="btn btn-primary" ng-click="getDodos(partner)">Match dodos</button>
+<hr/>
+
+  <div ng-repeat="dodo in dodos" class="panel panel-default">
+      <div class="panel-body">
+          <h1>{{dodo.title}} <small>ID: {{dodo.objectId}}</small></h1>
+          {{dodo.description}}<br/>
+          {{dodo}}
+      </div>
+  </div>
+

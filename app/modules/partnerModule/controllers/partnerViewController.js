@@ -3,6 +3,7 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
     var self = this;
 
     $scope.user = 'bamam';
+    $scope.dodos = {};
 
     self.init = function () {
 
@@ -23,7 +24,7 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
     $scope.getDodos = function(partner){
 
         dodoService.fetchDodoBasedOnPartner(partner).then(function(response){
-            console.log(response);
+            $scope.dodos = response.result;
         });
 
     };
