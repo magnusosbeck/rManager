@@ -71,5 +71,7 @@ angular.module('myApp', [
 
   }])
   .config(function ($mdThemingProvider) {
-      $mdThemingProvider.theme('default');
+      $mdThemingProvider.theme('default')
+        .primaryPalette('pink')
+        .accentPalette('orange');
   });

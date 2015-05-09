@@ -12,10 +12,19 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
         console.log(currentUser);
 
         if(currentUser && currentUser['partner']){
-            partnerService.read(currentUser['partner']['objectId']).then(function(response){
+            //partnerService.read(currentUser['partner']['objectId']).then(function(response){
+            partnerService.read('YV3XDxDmb2').then(function(response){
                 $scope.partner = response;
             });
         }
+        dodoService.get().then(function(response){
+
+            for(var i in response.results){
+                response.results[i].points = 100 + (response.results[i].size * 100);
+            }
+
+            $scope.dodos = response.results;
+        });
 
     };
 
@@ -28,7 +37,6 @@ partnerModule.controller('partnerViewController', ['$scope', 'partnerService', '
             for(var i in response.results){
                 response.results[i].points = 100 + (response.results[i].size * 100);
             }
-
 
             $scope.dodos = response.results;
         });

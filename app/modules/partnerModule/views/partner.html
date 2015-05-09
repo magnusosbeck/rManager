@@ -1,97 +1,124 @@
 <md-content layout-padding>
-            <h1 class="text-center">
-                <img src="http://9lanka.com/im/image/69802569971-girl-face.jpg"  width="100%" style="max-width: 200px;" alt=""/>
-                <br/>
-                <br/>
-                {{partner.firstName}} {{partner.lastName}}
-                <small>ID: {{partner.objectId}}</small>
-            </h1>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th class="text-center">
-                        initiative
-                    </th>
-                    <th class="text-center">
-                        feelings
-                    </th>
-                    <th class="text-center">
-                        family
-                    </th>
-                    <th class="text-center">
-                        career
-                    </th>
-                    <th class="text-center">
-                        wellRead
-                    </th>
-                    <th class="text-center">
-                        selfInterest
-                    </th>
-                    <th class="text-center">
-                        home
-                    </th>
-                    <th class="text-center">
-                        urbane
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.initiative || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.feelings || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.family || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.career || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.wellRead || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.selfInterest || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.home || '-'}}
-                    </td>
-                    <td class="text-center h1" style="font-weight: bolder;">
-                        {{partner.urbane || '-'}}
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+    <h1 class="text-center">
+        <img src="http://9lanka.com/im/image/69802569971-girl-face.jpg" width="100%" style="max-width: 200px;" alt=""/>
+        <br/>
+        <br/>
+        {{partner.firstName}} {{partner.lastName}}
+        <small>ID: {{partner.objectId}}</small>
+    </h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="text-center" color-by-parameter="'initiative'">
+                initiative
+            </th>
+            <th class="text-center" color-by-parameter="'feelings'">
+                feelings
+            </th>
+            <th class="text-center" color-by-parameter="'family'">
+                family
+            </th>
+            <th class="text-center" color-by-parameter="'career'">
+                career
+            </th>
+            <th class="text-center" color-by-parameter="'wellRead'">
+                wellRead
+            </th>
+            <th class="text-center" color-by-parameter="'selfInterest'">
+                selfInterest
+            </th>
+            <th class="text-center" color-by-parameter="'home'">
+                home
+            </th>
+            <th class="text-center" color-by-parameter="'urbane'">
+                urbane
+            </th>
+            <th class="text-center" color-by-parameter="'intimacy'">
+                intimacy
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'initiative'">
+                {{partner.initiative || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'feelings'">
+                {{partner.feelings || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'family'">
+                {{partner.family || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'career'">
+                {{partner.career || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'wellRead'">
+                {{partner.wellRead || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'selfInterest'">
+                {{partner.selfInterest || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'home'">
+                {{partner.home || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'urbane'">
+                {{partner.urbane || '-'}}
+            </td>
+            <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'intimacy'">
+                {{partner.intimacy || '-'}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </md-content>
 
 
 <md-content layout-padding>
     <md-list>
-        <div layout="row">
-            <div flex>
-                <md-subheader class="md-no-sticky">Dodo results:</md-subheader>
-            </div>
-            <div flex hide-sm class="text-right">
-                <md-button class="md-primary" ng-click="getDodos(partner)">Match dodos</md-button>
-            </div>
-        </div>
+        <!--<div layout="row">-->
+        <!--<div flex>-->
+        <!--<md-subheader class="md-no-sticky">Dodo results:</md-subheader>-->
+        <!--</div>-->
+        <!--<div flex hide-sm class="text-right">-->
+        <!--<md-button class="md-primary" ng-click="getDodos(partner)">Match dodos</md-button>-->
+        <!--</div>-->
+        <!--</div>-->
 
 
         <md-list-item class="md-3-line" ng-repeat="dodo in dodos">
             <div class="md-list-item-text">
-                <h3>{{ dodo.title }} <small>{{ dodo.objectId }}</small></h3>
-                <p>{{ dodo.description }}</p>
-                <span class="label label-default" ng-show="dodo.initiative">initiative: {{dodo.initiative || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.feelings">feelings: {{dodo.feelings || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.family">family: {{dodo.family || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.career">career: {{dodo.career || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.wellRead">wellRead: {{dodo.wellRead || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.selfInterest">selfInterest: {{dodo.selfInterest || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.home">home: {{dodo.home || '-'}}</span>
-                <span class="label label-default" ng-show="dodo.urbane">urbane: {{dodo.urbane || '-'}}</span>
-                <span class="label label-success">points: {{dodo.points}}</span>
+
+                <h2 style="font-weight: bold; margin-top: 0;">{{ dodo.title }}
+                    <small style="font-weight: bolder;" color-by-parameter="dodo">{{dodo.points}}p</small>
+                </h2>
+                        <span class="label label-default" style="background-color: lightgrey;"
+                              color-by-parameter="'initiative'"
+                              ng-show="dodo.initiative">initiative: {{dodo.initiative || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'feelings'"
+                      ng-show="dodo.feelings">feelings: {{dodo.feelings || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'family'"
+                      ng-show="dodo.family">family: {{dodo.family || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'career'"
+                      ng-show="dodo.career">career: {{dodo.career || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'wellRead'"
+                      ng-show="dodo.wellRead">wellRead: {{dodo.wellRead || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;"
+                      color-by-parameter="'selfInterest'" ng-show="dodo.selfInterest">selfInterest: {{dodo.selfInterest || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'home'"
+                      ng-show="dodo.home">home: {{dodo.home || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'urbane'"
+                      ng-show="dodo.urbane">urbane: {{dodo.urbane || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'intimacy'"
+                      ng-show="dodo.intimacy">urbane: {{dodo.intimacy || '-'}}</span>
+
+                <p>{{ dodo.description || 'This DoDo has no description'}}...</p>
+
+                <div class="pull-right">
+                    <md-button>ADD</md-button>
+                    <md-button>completed</md-button>
+                </div>
+                <div class="clearfix"></div>
+                <hr/>
             </div>
         </md-list-item>
     </md-list>
