@@ -1,10 +1,15 @@
+<div class="row">
+    <div class="col-md-6">
 <md-content layout-padding>
     <h1 class="text-center">
-        <img src="http://9lanka.com/im/image/69802569971-girl-face.jpg" width="100%" style="max-width: 200px;" alt=""/>
-        <br/>
-        <br/>
-        {{partner.firstName}} {{partner.lastName}}
-        <small>ID: {{partner.objectId}}</small>
+        <div style="background-image: url('http://9lanka.com/im/image/69802569971-girl-face.jpg'); background-size: cover; border-radius:200px; margin: auto;  height: 200px; width: 200px;">
+
+        </div>
+        <!--<img src="http://9lanka.com/im/image/69802569971-girl-face.jpg" width="100%" style="max-width: 200px;" alt=""/>-->
+        <!--<br/>-->
+        <!--<br/>-->
+        {{partner1.firstName}} {{partner1.lastName}}<br>
+        <small>ID: {{partner1.objectId}}</small>
     </h1>
     <table class="table">
         <thead>
@@ -41,31 +46,31 @@
         <tbody>
         <tr>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'initiative'">
-                {{partner.initiative || '-'}}
+                {{partner1.initiative || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'feelings'">
-                {{partner.feelings || '-'}}
+                {{partner1.feelings || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'family'">
-                {{partner.family || '-'}}
+                {{partner1.family || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'career'">
-                {{partner.career || '-'}}
+                {{partner1.career || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'wellRead'">
-                {{partner.wellRead || '-'}}
+                {{partner1.wellRead || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'selfInterest'">
-                {{partner.selfInterest || '-'}}
+                {{partner1.selfInterest || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'home'">
-                {{partner.home || '-'}}
+                {{partner1.home || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'urbane'">
-                {{partner.urbane || '-'}}
+                {{partner1.urbane || '-'}}
             </td>
             <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'intimacy'">
-                {{partner.intimacy || '-'}}
+                {{partner1.intimacy || '-'}}
             </td>
         </tr>
         </tbody>
@@ -75,17 +80,7 @@
 
 <md-content layout-padding>
     <md-list>
-        <!--<div layout="row">-->
-        <!--<div flex>-->
-        <!--<md-subheader class="md-no-sticky">Dodo results:</md-subheader>-->
-        <!--</div>-->
-        <!--<div flex hide-sm class="text-right">-->
-        <!--<md-button class="md-primary" ng-click="getDodos(partner)">Match dodos</md-button>-->
-        <!--</div>-->
-        <!--</div>-->
-
-
-        <md-list-item class="md-3-line" ng-repeat="dodo in dodos">
+        <md-list-item class="md-3-line" ng-repeat="dodo in dodos1 | orderBy: 'points' : 'reverse'">
             <div class="md-list-item-text">
 
                 <h2 style="font-weight: bold; margin-top: 0;">{{ dodo.title }}
@@ -123,3 +118,125 @@
         </md-list-item>
     </md-list>
 </md-content>
+    </div>
+    <div class="col-md-6">
+        <md-content layout-padding>
+            <h1 class="text-center">
+                <div style="background-image: url('http://9lanka.com/im/image/69802569971-girl-face.jpg'); background-size: cover; border-radius:200px; margin: auto;  height: 200px; width: 200px;">
+
+                </div>
+                <!--<img src="http://9lanka.com/im/image/69802569971-girl-face.jpg" width="100%" style="max-width: 200px;" alt=""/>-->
+                <!--<br/>-->
+                <!--<br/>-->
+                {{partner2.firstName}} {{partner2.lastName}}<br>
+                <small>ID: {{partner2.objectId}}</small>
+            </h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="text-center" color-by-parameter="'initiative'">
+                        initiative
+                    </th>
+                    <th class="text-center" color-by-parameter="'feelings'">
+                        feelings
+                    </th>
+                    <th class="text-center" color-by-parameter="'family'">
+                        family
+                    </th>
+                    <th class="text-center" color-by-parameter="'career'">
+                        career
+                    </th>
+                    <th class="text-center" color-by-parameter="'wellRead'">
+                        wellRead
+                    </th>
+                    <th class="text-center" color-by-parameter="'selfInterest'">
+                        selfInterest
+                    </th>
+                    <th class="text-center" color-by-parameter="'home'">
+                        home
+                    </th>
+                    <th class="text-center" color-by-parameter="'urbane'">
+                        urbane
+                    </th>
+                    <th class="text-center" color-by-parameter="'intimacy'">
+                        intimacy
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'initiative'">
+                        {{partner2.initiative || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'feelings'">
+                        {{partner2.feelings || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'family'">
+                        {{partner2.family || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'career'">
+                        {{partner2.career || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'wellRead'">
+                        {{partner2.wellRead || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'selfInterest'">
+                        {{partner2.selfInterest || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'home'">
+                        {{partner2.home || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'urbane'">
+                        {{partner2.urbane || '-'}}
+                    </td>
+                    <td class="text-center h1" style="font-weight: bolder;" color-by-parameter="'intimacy'">
+                        {{partner2.intimacy || '-'}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </md-content>
+
+
+        <md-content layout-padding>
+            <md-list>
+                <md-list-item class="md-3-line" ng-repeat="dodo in dodos2 | orderBy: 'points' : 'reverse'">
+                    <div class="md-list-item-text">
+
+                        <h2 style="font-weight: bold; margin-top: 0;">{{ dodo.title }}
+                            <small style="font-weight: bolder;" color-by-parameter="dodo">{{dodo.points}}p</small>
+                        </h2>
+                        <span class="label label-default" style="background-color: lightgrey;"
+                              color-by-parameter="'initiative'"
+                              ng-show="dodo.initiative">initiative: {{dodo.initiative || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'feelings'"
+                      ng-show="dodo.feelings">feelings: {{dodo.feelings || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'family'"
+                      ng-show="dodo.family">family: {{dodo.family || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'career'"
+                      ng-show="dodo.career">career: {{dodo.career || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'wellRead'"
+                      ng-show="dodo.wellRead">wellRead: {{dodo.wellRead || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;"
+                      color-by-parameter="'selfInterest'" ng-show="dodo.selfInterest">selfInterest: {{dodo.selfInterest || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'home'"
+                      ng-show="dodo.home">home: {{dodo.home || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'urbane'"
+                      ng-show="dodo.urbane">urbane: {{dodo.urbane || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'intimacy'"
+                      ng-show="dodo.intimacy">urbane: {{dodo.intimacy || '-'}}</span>
+
+                        <p>{{ dodo.description || 'This DoDo has no description'}}...</p>
+
+                        <div class="pull-right">
+                            <md-button>ADD</md-button>
+                            <md-button>completed</md-button>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr/>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+</div>

@@ -1,9 +1,76 @@
-<h1>Dodos <span class="badge">Count : {{dodos.length}}</span></h1>
-<div ng-repeat="dodo in dodos" style="background-color: #3a3a3a; padding: 20px; margin-top: 20px;">
-    <h3 class="text-center">{{dodo.title}}<br/><small>{{dodo.description}}</small></h3>
-    <hr>
-    <dl ng-repeat="(key, value) in dodo | orderBy:'firstName'" class="dl-horizontal"
-        ng-class="key == 'description' || key == 'createdAt' || key == 'title' || key == 'objectId' || key == 'updatedAt'  ? 'text-info':'text-warning'">
-        <dt>{{key}}</dt><dd><kbd>{{value}}</kbd></dd>
-    </dl>
+<div class="row">
+    <div class="col-md-4" ng-repeat="dodo in dodos" style="min-height: 300px;">
+        <h4 style="font-weight: bold; margin-top: 0;">{{ dodo.title }}
+            <small style="font-weight: bolder;" color-by-parameter="dodo">{{dodo.points}}p</small>
+        </h4>
+                        <span class="label label-default" style="background-color: lightgrey;"
+                              color-by-parameter="'initiative'"
+                              ng-show="dodo.initiative">initiative: {{dodo.initiative || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'feelings'"
+                      ng-show="dodo.feelings">feelings: {{dodo.feelings || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'family'"
+                      ng-show="dodo.family">family: {{dodo.family || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'career'"
+                      ng-show="dodo.career">career: {{dodo.career || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'wellRead'"
+                      ng-show="dodo.wellRead">wellRead: {{dodo.wellRead || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;"
+                      color-by-parameter="'selfInterest'" ng-show="dodo.selfInterest">selfInterest: {{dodo.selfInterest || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'home'"
+                      ng-show="dodo.home">home: {{dodo.home || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'urbane'"
+                      ng-show="dodo.urbane">urbane: {{dodo.urbane || '-'}}</span>
+                <span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'intimacy'"
+                      ng-show="dodo.intimacy">urbane: {{dodo.intimacy || '-'}}</span>
+
+        <p>{{ dodo.description || 'This DoDo has no description'}}...</p>
+
+        <div class="pull-right">
+            <md-button>ADD</md-button>
+            <md-button>completed</md-button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </div>
+
+
+<!--<md-content layout-padding>-->
+    <!--<md-list>-->
+        <!--<md-list-item class="md-3-line" ng-repeat="dodo in dodos">-->
+            <!--<div class="md-list-item-text">-->
+
+                <!--<h2 style="font-weight: bold; margin-top: 0;">{{ dodo.title }}-->
+                    <!--<small style="font-weight: bolder;" color-by-parameter="dodo">{{dodo.points}}p</small>-->
+                <!--</h2>-->
+                        <!--<span class="label label-default" style="background-color: lightgrey;"-->
+                              <!--color-by-parameter="'initiative'"-->
+                              <!--ng-show="dodo.initiative">initiative: {{dodo.initiative || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'feelings'"-->
+                      <!--ng-show="dodo.feelings">feelings: {{dodo.feelings || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'family'"-->
+                      <!--ng-show="dodo.family">family: {{dodo.family || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'career'"-->
+                      <!--ng-show="dodo.career">career: {{dodo.career || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'wellRead'"-->
+                      <!--ng-show="dodo.wellRead">wellRead: {{dodo.wellRead || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;"-->
+                      <!--color-by-parameter="'selfInterest'" ng-show="dodo.selfInterest">selfInterest: {{dodo.selfInterest || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'home'"-->
+                      <!--ng-show="dodo.home">home: {{dodo.home || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'urbane'"-->
+                      <!--ng-show="dodo.urbane">urbane: {{dodo.urbane || '-'}}</span>-->
+                <!--<span class="label label-default" style="background-color: lightgrey;" color-by-parameter="'intimacy'"-->
+                      <!--ng-show="dodo.intimacy">urbane: {{dodo.intimacy || '-'}}</span>-->
+
+                <!--<p>{{ dodo.description || 'This DoDo has no description'}}...</p>-->
+
+                <!--<div class="pull-right">-->
+                    <!--<md-button>ADD</md-button>-->
+                    <!--<md-button>completed</md-button>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--<hr/>-->
+            <!--</div>-->
+        <!--</md-list-item>-->
+    <!--</md-list>-->
+<!--</md-content>-->
