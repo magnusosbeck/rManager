@@ -1,0 +1,32 @@
+.ticket {
+  min-height: 200px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: lightgrey;
+  padding: 10px;
+}
+.ticket:before {
+  content: '';
+  display: block;
+  width: 20px;
+  top: 0;
+  height: 200px;
+  position: absolute;
+  margin-left: -20px;
+  background-image: url('../styleing/img/ticket-leftSide.png');
+}
+.ticket:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 200px;
+  top: 0;
+  right: 0;
+  margin-right: -10px;
+  background-image: url('../styleing/img/ticket-rightSide.png');
+}
+.ticket .ticket-content {
+  background-color: #e2e2e2;
+  height: 180px;
+}
